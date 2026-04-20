@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+		<div class="container">
+			<a class="navbar-brand fw-bold" th:href="@{/}">Lorica</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+					aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Alternar navegacao">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarPrincipal">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/}">Página Inicial</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/produto/mostruario}">Mostruário</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Categorias
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" th:href="@{/categoria/listar}">Lista de categorias</a></li>
+							<li><a class="dropdown-item" th:href="@{/categoria/formulario}">Cadastro de categorias</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Produtos
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" th:href="@{/produto/listar}">Lista de produtos</a></li>
+							<li><a class="dropdown-item" th:href="@{/produto/formulario}">Cadastro de produtos</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<footer th:fragment="footer" class="bg-white border-top mt-5">
+	<div class="container py-3 d-flex justify-content-between flex-wrap gap-2">
+		<a class="text-decoration-none" th:href="@{/}">Página principal</a>
+		<a class="text-decoration-none" href="#topo">Voltar ao topo</a>
+	</div>
+</footer>
+</body>
+</html>
+
