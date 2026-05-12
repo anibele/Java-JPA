@@ -17,6 +17,7 @@ public class User {
 
     private String name;
     private String email;
+    private String senha;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference // Gerencia a referência para evitar problemas de serialização JSON
